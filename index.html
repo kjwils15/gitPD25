@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Helping Hands</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="IFT458_Project1.css" type="text/css" rel="stylesheet">
+    <script src="IFT458_Project1.js"></script>
+    <!--
+        Harrison Malek and Kelly Wilson
+        IFT 458 - 2021 Summer C
+        Project Deliverable 1
+    -->
+</head>
+
+<body onload="geoFunction()">
+    <header>
+        <a href="">Galleries</a>
+        <a href="">About Us</a>
+        <a href="">Contact Us</a>
+        <div class="dropdown">
+            <button class="dropButton">Members
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="">Member Directory</a>
+                <a href="">Leadership</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropButton">Resources
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="">Volunteer Policies</a>
+                <a href="">Event check-in form</a>
+                <a href="">Training modules</a>
+            </div>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search..">
+            <button type="submit">Search</button>
+        </div>
+    </header>
+    <section class="first">
+        <div class="left">
+            <img src="responsive-logo.svg" />
+        </div>
+        <div class="mid">
+            <button type="button" id="donate">DONATE TODAY!</button>
+        </div>
+        <div class="signIn">
+            <a href="Sign-in.html"><button type="button" id="sign">Sign In</button></a>
+            <a href="registration.html"><button type="button" id="join">Join Us!</button></a>
+        </div>
+    </section>
+    <div class="divider"><span>Join us in nurturing our community through passionate service and giving.</span></div>
+    <section class="second">
+        <div class="images">
+
+        </div>
+    </section>
+    <section class="second">
+        <img src="images/ocean.jpg" alt="Ocean Clean-up" width="216" height="324"><img src="images/sweeping.jpg" alt="Volunteers cleaning" width="485" height="324"><img src="images/ppe.jpg" alt="Volunteer delivering ppe" width="431" height="324"><img src="images/garden.jpg" alt="Volunteers planting trees" width="216" height="324">
+        <!--Image sources: ocean.jpg - OCG saving the ocean https://unsplash.com/@oceancleanupgroup // sweeping.jpg - Josh Hild https://unsplash.com/@joshhild // ppe.jpg - Alex Mecl https://unsplash.com/@circlz // garden.jpg - Anna Earl https://unsplash.com/@annaelizaearl -->
+    </section>
+    <div class="divider"></div>
+    <section class="third">
+        <div class="vid">
+            <video width="640" height="360" controls>
+                <source src="Videos/Volunteering.mp4" type="video/mp4">
+                <!--Video source: Washington College - https://www.youtube.com/watch?v=OCJtvneLhe8 -->
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="about">
+            <p class="title">About Helping Hands</p>
+            <p class="content">
+                Helping Hands is a community driven volunteer program that provides structure, resources, and event planning support to Members 
+                who wish to give back to their local community. Join us today, and you can work closely with our network of local leaders to 
+                plan, attend, or donate to various projects and events that seek to nurture a healthy community.
+            </p>
+            <p class="content">
+                Our past projects include ocean clean-up events, community garden construction, and meal preparation for local food banks. As 
+                the Covid-19 pandemic has affected many people in our neighborhoods, our community-support efforts now include the procurment and 
+                delivery of personal protective equipment to those who need it most.
+            </p>
+            <p class="content">
+                Sign up today, and help us build a thriving community for everyone!
+            </p>
+        </div>
+    </section>
+    <section class="foot">
+        <p><b>Helping Hands</b></p>
+        <p>1234 Helpful Ave SE</p>
+        <p>(555)555-5555</p>
+        <p>volunteer@HelpingHands.org</p>
+        <p>HelpingHands.org</p>
+        <a href="">Site Map</a> | <a href="">Terms & Conditions</a> | <a href="">Privacy Policy</a> | <a href="">Copyright &copy; 2021</a>
+    </section>
+</body>

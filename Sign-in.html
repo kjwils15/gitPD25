@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Sign-in</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="IFT458_Project1.css" type="text/css" rel="stylesheet">
+    <script src="IFT458_Project1.js"></script>
+    <!--
+        Harrison Malek and Kelly Wilson
+        IFT 458 - 2021 Summer C
+        Project Deliverable 1
+        Sign-in page
+    -->
+</head>
+
+<body class="regBody">
+    <header>
+        <a href="">Galleries</a>
+        <a href="">About Us</a>
+        <a href="">Contact Us</a>
+        <div class="dropdown">
+            <button class="dropButton">Members
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="">Member Directory</a>
+                <a href="">Leadership</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropButton">Resources
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="">Volunteer Policies</a>
+                <a href="">Event check-in form</a>
+                <a href="">Training modules</a>
+            </div>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search..">
+            <button type="submit">Search</button>
+        </div>
+    </header>
+    <div class="reg">
+        <h1>Sign-in</h1>
+        <form id="Sign" autocomplete="off">
+            <label for="usernameSign">Username:</label><br>
+            <input type="text" id="usernameSign" name="usernameSign" required maxlength="8"><br>
+            <label for="passwordSign">Password:</label><br>
+            <input type="password" id="passwordSign" name="passwordSign" required maxlength="8"><br>
+            <button type="submit" value="Sign-in">Sign In</button>
+    </div>

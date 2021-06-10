@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Registration</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="IFT458_Project1.css" type="text/css" rel="stylesheet">
+    <script src="IFT458_Project1.js"></script>
+    <!--
+        Harrison Malek and Kelly Wilson
+        IFT 458 - 2021 Summer C
+        Project Deliverable 1
+        Registration Form
+    -->
+</head>
+
+<body class="regBody">
+    <header>
+        <a href="">Galleries</a>
+        <a href="">About Us</a>
+        <a href="">Contact Us</a>
+        <div class="dropdown">
+            <button class="dropButton">Members
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="">Member Directory</a>
+                <a href="">Leadership</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropButton">Resources
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="">Volunteer Policies</a>
+                <a href="">Event check-in form</a>
+                <a href="">Training modules</a>
+            </div>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search..">
+            <button type="submit">Search</button>
+        </div>
+    </header>
+    <div class="reg">
+        <h1>Registration Form</h1>
+        <p>fields marked with an asterisk (*) are required</p>
+        <form id="registration" autocomplete="off">
+            <label for="username">Username (Maximum 8 characters):</label><span class="required"> *</span><br>
+            <input type="text" id="username" name="username" required maxlength="8"><br>
+            <label for="password">Password (Maximum 8 characters):</label><span class="required"> *</span><br>
+            <p>Must include at least a digit, lowercase letter, and uppercase letter</p>
+            <input type="password" id="password" name="password" required maxlength="8" onfocusout="passwordCheck()"><br>
+            <label for="fname">First Name:</label><br>
+            <input type="text" id="fname" name="fname" maxlength="16" pattern="[a-zA-Z]*"><br>
+            <label for="mname">Middle Name:</label><br>
+            <input type="text" id="mname" name="mname" maxlength="16" pattern="[a-zA-Z]*"><br>
+            <label for="lname">Last Name:</label><span class="required"> *</span><br>
+            <input type="text" id="lname" name="lname" required maxlength="16" pattern="[a-zA-Z]*"><br>
+            <fieldset>
+                <legend>Gender<span class="required"> *</span></legend><br>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Female</label>
+            </fieldset>
+            <label for="address">Street Address:</label><span class="required"> *</span><br>
+            <input type="text" id="address" name="address" required maxlength="32" pattern="[a-zA-Z0-9][a-zA-z0-9 ]*"><br>
+            <label for="city">City:</label><span class="required"> *</span><br>
+            <input type="text" id="city" name="city" required maxlength="16" pattern="[a-zA-Z][a-zA-Z ]*"><br>
+            <label for="state">State:</label><span class="required"> *</span><br>
+            <select id="state" name="state" required>
+                <option value="AL">AL</option>
+                <option value="AK">AK</option>
+                <option value="AZ">AZ</option>
+                <option value="AR">AR</option>
+                <option value="CA">CA</option>
+                <option value="CO">CO</option>
+                <option value="CT">CT</option>
+                <option value="DE">DE</option>
+                <option value="FL">FL</option>
+                <option value="GA">GA</option>
+                <option value="HI">HI</option>
+                <option value="ID">ID</option>
+                <option value="IL">IL</option>
+                <option value="IN">IN</option>
+                <option value="IA">IA</option>
+                <option value="KS">KS</option>
+                <option value="KY">KY</option>
+                <option value="LA">LA</option>
+                <option value="ME">ME</option>
+                <option value="MD">MD</option>
+                <option value="MA">MA</option>
+                <option value="MI">MI</option>
+                <option value="MN">MN</option>
+                <option value="MS">MS</option>
+                <option value="MO">MO</option>
+                <option value="MT">MT</option>
+                <option value="NE">NE</option>
+                <option value="NV">NV</option>
+                <option value="NH">NH</option>
+                <option value="NJ">NJ</option>
+                <option value="NM">NM</option>
+                <option value="NY">NY</option>
+                <option value="NC">NC</option>
+                <option value="ND">ND</option>
+                <option value="OH">OH</option>
+                <option value="OK">OK</option>
+                <option value="OR">OR</option>
+                <option value="PA">PA</option>
+                <option value="RI">RI</option>
+                <option value="SC">SC</option>
+                <option value="SD">SD</option>
+                <option value="TN">TN</option>
+                <option value="TX">TX</option>
+                <option value="UT">UT</option>
+                <option value="VT">VT</option>
+                <option value="VA">VA</option>
+                <option value="WA">WA</option>
+                <option value="WV">WV</option>
+                <option value="WI">WI</option>
+                <option value="WY">WY</option>
+            </select><br>
+            <label for="zip">Zip Code:</label><span class="required"> *</span><br>
+            <input type="text" id="zip" name="zip" required maxlength="5" pattern="[0-9]{5}"><br>
+            <label for="email">Email:</label><span class="required"> *</span><br>
+            <input type="text" id="email" name="email" required maxlength="32" pattern=".+@.+\..+"><br>
+            <label for="cell">Cell Phone Number:</label><span class="required"> *</span><br>
+            (<input type="text" id="areaCode" name="cell" required minlength="3" maxlength="3" pattern="[2-9][0-8][0-9]">)
+            <input type="text" id="exchangeCode" name="cell" required minlength="3" maxlength="3" pattern="[2-9][0-9][0-9]"> -
+            <input type="text" id="lineNumber" name="cell" required minlength="4" maxlength="4"pattern="[0-9]{4}"><br>
+            <label for="origin">Country of Origin:</label><span class="required"> *</span><br>
+            <input type="text" id="origin" name="origin" required maxlength="26" pattern="[a-zA-Z][a-zA-Z ]*"><br>
+            <fieldset>
+                <legend>Date of Birth<span class="required"> *</span></legend><br>
+                <label class="date" for="month">Month&nbsp&nbsp&nbsp</label>
+                <label class="date" for="day">Day&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                <label class="date" for="year">Year</label><br>
+                <input type="text" id="month" name="dob" placeholder="mm" required minlength="2" maxlength="2" pattern="[0-1][0-9]" onfocusout="monthCheck()" oninput="zeroMonth();completeCheck()"> <b>/</b>
+                <input type="text" id="day" name="dob" placeholder="dd" required minlength="2" maxlength="2" pattern="[0-3][0-9]" onfocusout="dayCheck()" oninput="zeroDay();completeCheck()"> <b>/</b>
+                <input type="text" id="year" name="dob" placeholder="yyyy" required minlength="4" maxlength="4" pattern="[12][09][0-9][0-9]" oninput="yearCheck();completeCheck()">
+            </fieldset>
+            <label for="org">Member Organization:</label><br>
+            <input type="text" id="org" name="org"><br>
+            <button type="submit" value="Register">Register</button>
+        </form>
+    </div>
+</body>
